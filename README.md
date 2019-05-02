@@ -1,4 +1,4 @@
-## AWS Tools Ado Vsts User Guide
+## User Guide of the AWS Tools for Microsoft Azure DevOps (formerly VSTS)
 
 The open source version of the user guide for the AWS Tools for Microsoft Azure DevOps (formerly VSTS).
 
