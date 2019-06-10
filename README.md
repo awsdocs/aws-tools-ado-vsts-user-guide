@@ -1,10 +1,10 @@
-## User Guide of the AWS Tools for Microsoft Azure DevOps (formerly VSTS)
+## User Guide of the AWS Tools for Microsoft Visual Studio Team Services
 
-The open source version of the user guide for the AWS Tools for Microsoft Azure DevOps (formerly VSTS).
+The open source version of the user guide for the AWS Tools for Microsoft Visual Studio Team Services.
 
 This repository contains source content for the official [AWS Tools for Microsoft Visual Studio Team Services User Guide](https://docs.aws.amazon.com/vsts/latest/userguide/welcome.html).
 
-The GitHub repository for the AWS Tools for Microsoft Azure DevOps (formerly VSTS) is at https://github.com/aws/aws-vsts-tools.
+The GitHub repository for the AWS Tools for Microsoft Visual Studio Team Services is at https://github.com/aws/aws-vsts-tools.
 
 ## Recent Updates
 
