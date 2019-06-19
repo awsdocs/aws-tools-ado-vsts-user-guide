@@ -1,4 +1,4 @@
-# AWS CloudFormation Create\-Update Stack Task<a name="cloudformation-create-update"></a>
+# AWS CloudFormation Create/Update Stack Task<a name="cloudformation-create-update"></a>
 
 ## Synopsis<a name="synopsis"></a>
 
@@ -27,7 +27,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -187,7 +187,7 @@ The Amazon Resource Names \(ARNs\) of the triggers to monitor during stack creat
 
 By default AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent update operations for the stack, unless you specify otherwise\. If you do specify rollback triggers for this parameter, those triggers replace any list of triggers previously specified for the stack\. This means:
 + To use the rollback triggers previously specified for this stack, if any, don't specify this parameter\.
-+ To specify new or updated rollback triggers, you must specify all the triggers that you want used for this stack, even triggers you've specifed before \(for example, when creating the stack or during a previous stack update\)\. Any triggers that you don't include in the updated list of triggers are no longer applied to the stack\.
++ To specify new or updated rollback triggers, you must specify all the triggers that you want used for this stack, even triggers you've specified before \(for example, when creating the stack or during a previous stack update\)\. Any triggers that you don't include in the updated list of triggers are no longer applied to the stack\.
 
 If a specified trigger is missing, the entire stack operation fails and is rolled back\.
 

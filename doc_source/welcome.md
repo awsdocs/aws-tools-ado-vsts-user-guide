@@ -1,32 +1,41 @@
 # AWS Tools for Microsoft Visual Studio Team Services<a name="welcome"></a>
 
-AWS Tools for Microsoft Visual Studio Team Services is an extension for Visual Studio Team Services \(VSTS\)\. It contains tasks you can use in build and release definitions in VSTS and Microsoft Team Foundation Server \(TFS\) to interact with AWS services\. AWS Tools for VSTS is available through the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools)\.
+AWS Tools for Microsoft Visual Studio Team Services is an extension for Visual Studio Team Services \(VSTS\)\. It contains tasks you can use in build and release definitions in VSTS and Microsoft Team Foundation Server \(TFS\) to interact with AWS services\. AWS Tools for VSTS is available through the Visual Studio Marketplace\. See the [Getting Started](getting-started.md) topic for more information\.
 
 You can use these tasks in a VSTS project or in an on\-premises Team Foundation Server environment\. The available AWS tasks include:
-+   
+
+
 **Deployment tasks**  
-  + AWS CodeDeploy Deploy Application Task
-  + AWS CloudFormation Create/Update Stack Task
-  + AWS CloudFormation Delete Stack Task
-  + AWS CloudFormation Execute Change Set Task
-  + AWS Elastic Beanstalk Deployment Task
-  + Amazon Elastic Container Registry Push Image Task
-  + AWS Lambda Deployment Task
-  + AWS Lambda \.NET Core Deployment Task
-  + AWS Lambda Invoke Function Task
-+   
+
+| Task | Description | 
+| --- |--- |
+| [AWS CodeDeploy Application Deployment](codedeploy-deployment.md) | Deploys an application to Amazon EC2 instances\. | 
+| [AWS CloudFormation Create/Update Stack](cloudformation-create-update.md) | Creates a new AWS CloudFormation stack or updates the stack if it exists\. | 
+| [AWS CloudFormation Delete Stack](cloudformation-delete-stack.md) | Deletes an AWS CloudFormation stack\. | 
+| [AWS CloudFormation Execute Change Set](cloudformation-execute-changeset.md) | Executes an AWS CloudFormation change set to create or update a stack\. | 
+| [AWS Elastic Beanstalk Create Version](elastic-beanstalk-createversion.md) | Creates a new version of an application\. | 
+| [AWS Elastic Beanstalk Deploy Application](elastic-beanstalk-deploy.md) | Deploys a new version of an application to an Elastic Beanstalk environment\. | 
+| [Amazon ECR Push](ecr-pushimage.md) | Pushes a Docker image to the Amazon Elastic Container Registry \(ECR\)\. | 
+| [AWS Lambda Deploy Function](lambda-deploy.md) | Supports deployment of AWS Lambda functions for all supported Lambda language runtimes\. | 
+| [AWS Lambda \.NET Core](lambda-netcore-deploy.md) | Builds, packages, and deploys a \.NET Core AWS Lambda function or serverless application\. | 
+| [AWS Lambda Invoke Function](lambda-invoke.md) | Invokes an AWS Lambda function with a JSON payload\. | 
+
+
 **General purpose tasks**  
-  + AWS CLI
-  + AWS Tools for Windows PowerShell Script Task
-  + AWS Shell Script Task
-  + AWS S3 Download Task
-  + AWS S3 Upload Task
-  + AWS Send Message Task
-  + AWS Secrets Manager Create/Update Secret Task
-  + AWS Secrets Manager Get Secret Task
-  + AWS Systems Manager Get Parameter Task
-  + AWS Systems Manager Set Parameter Task
-  + AWS Systems Manager Run Command Task
+
+| Task | Description | 
+| --- |--- |
+| [AWS CLI](aws-cli.md) | Runs a command using the AWS CLI\. | 
+| [AWS Tools for Windows PowerShell Script](awspowershell-module-script.md) | Runs a PowerShell script that uses cmdlets from the AWS Tools for Windows PowerShell module\. | 
+| [AWS Shell Script](awsshell.md) | Run a shell script using Bash with AWS credentials\. | 
+| [Amazon S3 Download](s3-download.md) | Downloads file and folder content from an Amazon Simple Storage Service \(S3\) bucket\. | 
+| [Amazon S3 Upload](s3-upload.md) | Uploads file and folder content to an Amazon Simple Storage Service \(S3\) bucket\. | 
+| [AWS Send SNS or SQS Message](send-message.md) | Sends a message to an Amazon Simple Notification Service \(SNS\) topic or to an Amazon Simple Queue Service \(SQS\) queue\. | 
+| [AWS Secrets Manager Create/Update Secret](secretsmanager-create-update.md) | Updates a secret, optionally creating a secret if it does not exist\. | 
+| [AWS Secrets Manager Get Secret](secretsmanager-getsecret.md) | Stores the value of a secret in AWS Secrets Manager into a secret build variable\. | 
+| [AWS SSM Get Parameter](systemsmanager-getparameter.md) | Reads one or more values from Systems Manager Parameter Store into build variables\. | 
+| [AWS SSM Set Parameter](systemsmanager-setparameter.md) | Creates or updates a parameter in Systems Manager Parameter Store\. | 
+| [AWS SSM Run Command](systemsmanager-runcommand.md) | Runs a Systems Manager or user\-provided Command on a fleet of EC2 instances\. | 
 
 ## What's in This Guide<a name="what-s-in-this-guide"></a>
 
@@ -34,7 +43,7 @@ The AWS Tools for VSTS User Guide describes how to install and use the AWS Tools
 
  [Getting Started](getting-started.md) 
 
-How to set up a VSTS account, install the AWS Tools for VSTS and how to set up AWS credentials to use the tasks using either service endpoints, environment variables or Amazon EC2 instance metadata \(for build agents running on Amazon EC2 instances\)\.
+How to set up an AWS account and install the AWS Tools for VSTS\. Also how to set up AWS credentials for use in the tasks, which can be accomplished using service endpoints, environment variables, or Amazon EC2 instance metadata \(for build agents running on Amazon EC2 instances\)\.
 
  [Using the AWS Tools for VSTS](tutorials.md) 
 

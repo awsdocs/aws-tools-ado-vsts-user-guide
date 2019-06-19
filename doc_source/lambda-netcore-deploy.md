@@ -1,8 +1,8 @@
-# AWS Lambda \.NET Core Deployment Task<a name="lambda-netcore-deploy"></a>
+# AWS Lambda \.NET Core Task<a name="lambda-netcore-deploy"></a>
 
 ## Synopsis<a name="synopsis"></a>
 
-Builds, packages and deploys a \.NET Core AWS Lambda function or serverless application\. Optionally the task can create the deployment package for subsequent deployment in another build or release pipeline\.
+Builds, packages, and deploys a \.NET Core AWS Lambda function or serverless application\. Optionally the task can create the deployment package for subsequent deployment in another build or release pipeline\.
 
  **Note:** this task is specific to Lambda functions written in C\# or F\#\. For other languages supportedby Lambda please refer to the AWS Lambda Deploy Function task\.
 
@@ -29,7 +29,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 

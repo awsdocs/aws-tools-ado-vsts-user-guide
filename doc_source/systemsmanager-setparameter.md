@@ -1,12 +1,14 @@
-# AWS Systems Manager Set Parameter<a name="systemsmanager-setparameter"></a>
+# AWS SSM Set Parameter Task<a name="systemsmanager-setparameter"></a>
+
+\(AWS Systems Manager Set Parameter Task\)
 
 ## Synopsis<a name="synopsis"></a>
 
-TBD
+Creates or updates a parameter in Systems Manager Parameter Store\.
 
 ## Description<a name="description"></a>
 
-TBD
+Use this task to creates or updates a parameter in Systems Manager Parameter Store\.
 
 ## Parameters<a name="parameters"></a>
 
@@ -27,7 +29,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -37,7 +39,7 @@ If a region is not specified in the task configuration the task will attempt to 
 
 The name identifying a single parameter to be created or updated in the store\.
 
-### Paraneter Type<a name="paraneter-type"></a>
+### Parameter Type<a name="paraneter-type"></a>
 
 The type of parameter to be written Choose from \-
 + String: the parameter is assigned a single string value

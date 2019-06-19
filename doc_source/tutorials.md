@@ -6,7 +6,7 @@ The following tutorials demonstrate how to use tasks from the AWS Tools for Micr
 + Either a VSTS account or on\-premises Team Foundation Server\.
 + An AWS account and preferably an associated IAM user account\.
 + Task specific permissions\.
-+ An existing VSTS project with the build definition template specified in the tutorial\.
++ A VSTS project with the build definition template specified in each tutorial\.
 
 See [Getting Started](getting-started.md) for instructions to install the AWS Tools for VSTS and set up your credentials\.
 

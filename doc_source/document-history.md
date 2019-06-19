@@ -1,14 +1,16 @@
 # Document History for AWS Tools for Microsoft Visual Studio Team Services<a name="document-history"></a>
 
-*Last documentation update:* March 29, 2019
+*Last documentation update:* June 18, 2019
 
-The following table describes important changes to the AWS Tools for Microsoft Visual Studio Team Services over the course of its history\. For notification about updates to this documentation, you can subscribe to an [RSS feed](https://docs.aws.amazon.com/toolkit-for-visual-studio/latest/user-guide/amazon-tools-for-vsts-guide-doc-history.rss)\. 
+The following table describes important changes to the AWS Tools for Microsoft Visual Studio Team Services over the course of its history\. For notification about updates to this documentation, you can subscribe to an [RSS feed](https://docs.aws.amazon.com/vsts/latest/userguide/amazon-tools-for-vsts-guide-doc-history.rss)\. 
 
 | Change | Description | Date | 
 | --- |--- |--- |
-| [Task permissions](#document-history) | Added permission requirements to the tasks\. | July 25, 2018 | 
+| [Refresh](#document-history) | Screenshots with relevant content and task names were refreshed for user\-interface updates\. | June 18, 2019 | 
+| [AWS CloudFormation Create/Update Stack Task](cloudformation-create-update.md) | Added information about the option to log warning messages when no changes are reported\. | March 29, 2019 | 
+| [Amazon Elastic Container Registry Push Image](ecr-pushimage.md) | Added permission requirements to the task\. | July 25, 2018 | 
 | [AWS Systems Manager Set Parameter](systemsmanager-setparameter.md) | Added the AWS Systems Manager Set Parameter task\. | July 23, 2018 | 
-| [AWS Shell](awsshell.md) | Added the AWS Shell task\. | July 23, 2018 | 
+| [AWS Shell Script](awsshell.md) | Added the AWS Shell Script task\. | July 23, 2018 | 
 | [AWS Secrets Manager Get Secret](secretsmanager-getsecret.md) | Added the AWS Secrets Manager Get Secret task\. | July 23, 2018 | 
 | [AWS Secrets Manager Create/Update Secret](secretsmanager-create-update.md) | Added the AWS Secrets Manager Create/Update Secret task\. | July 23, 2018 | 
 | [AWS Elastic Beanstalk Create Version](elastic-beanstalk-createversion.md) | Added the AWS Elastic Beanstalk Create Version task\. | July 23, 2018 | 

@@ -1,8 +1,10 @@
-# AWS Systems Manager Get Parameter<a name="systemsmanager-getparameter"></a>
+# AWS SSM Get Parameter Task<a name="systemsmanager-getparameter"></a>
+
+\(AWS Systems Manager Get Parameter Task\)
 
 ## Synopsis<a name="synopsis"></a>
 
-Reads one or more values from Systems Manager's Parameter Store into build variables\.
+<a name="systemsmanager-getparameter-synopisis"></a>Reads one or more values from Systems Manager Parameter Store into build variables\.
 
 ## Description<a name="description"></a>
 
@@ -27,7 +29,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -43,15 +45,15 @@ The name identifying a single parameter to be read from the store\. Required if 
 
 ### Parameter Version<a name="parameter-version"></a>
 
-If unspecified the value associated with the latest version of the parameter is read\. If specified the task requests the value associated with the supplied version\. Parameter versions start at at 1 and increment each time a new value is stored for the parameter\.
+If unspecified the value associated with the latest version of the parameter is read\. If specified the task requests the value associated with the supplied version\. Parameter versions start at 1 and increment each time a new value is stored for the parameter\.
 
 This field is only available when Read Mode is set to get a single parameter value\.
 
 ### Parameter Path<a name="parameter-path"></a>
 
-The path hierarchy for the parameter\(s\) to be read\. Hierarchies start with, and are separated by, a forward slash \(/\) and may contain up to five levels\. The path hierarchy can identify a specific parameter in the hierarchy by appending the parameter name, or can identify a group of parameters sharing the hierarchy path\. If the supplied hierarchy contains multiple parameters, all parameter values in the hierachy are downloaded\.
+The path hierarchy for the parameter\(s\) to be read\. Hierarchies start with, and are separated by, a forward slash \(/\) and may contain up to five levels\. The path hierarchy can identify a specific parameter in the hierarchy by appending the parameter name, or can identify a group of parameters sharing the hierarchy path\. If the supplied hierarchy contains multiple parameters, all parameter values in the hierarchy are downloaded\.
 
- **Note:** *SecureString* parameters found in a hierachy will be automatically set as secret variables\.
+ **Note:** *SecureString* parameters found in a hierarchy will be automatically set as secret variables\.
 
 Required if *Read Mode* is set to *Get values for parameter hierarchy*\.
 
