@@ -6,7 +6,7 @@ Downloads file and folder content from an Amazon Simple Storage Service \(S3\) b
 
 ## Description<a name="description"></a>
 
-Downloads file and folder content from an Amazon Simple Storage Service \(S3\) bucket to a folder location\. The source location in the bucket, or key prefix, can also be specified\. If a source location is not supplied,the bucket root is used\. You specify the files to download using a set of one or more globbing patterns\. The default pattern is `**`, causing all files in all folders at and beneath the source location to be downloaded, preserving the relative folder paths\.
+Downloads file and folder content from an Amazon Simple Storage Service \(S3\) bucket to a folder location\. The source location in the bucket, or key prefix, can also be specified\. If a source location is not supplied, the bucket root is used\. You specify the files to download using a set of one or more globbing patterns\. The default pattern is `**`, causing all files in all folders at and beneath the source location to be downloaded, preserving the relative folder paths\.
 
 ## Parameters<a name="parameters"></a>
 
@@ -27,7 +27,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resources the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -39,7 +39,7 @@ The name of the Amazon S3 bucket containing the content to download\.
 
 ### Source Folder<a name="source-folder"></a>
 
-The source folder \(or S3 key prefix\) in the bucket that the filename selection pattern\(s\) will be run against to select objects to download\. If not set the root of the bucket is assumed\.
+The source folder \(or S3 key prefix\) in the bucket that the filename selection patterns will be run against to select objects to download\. If not set the root of the bucket is assumed\.
 
 ### Filename Patterns<a name="filename-patterns"></a>
 
@@ -53,7 +53,7 @@ The target folder on the build host to contain the downloaded content\. You can 
 
 #### Encryption Key Management<a name="encryption-key-management"></a>
 
-When you retrieve an object from Amazon S3 that was encrypted by using server\-side encryption with customer\-provided encryption keys \(SSE\-C\), set *Use customer\-provided encryption key* and provide the customer key data to enable the object\(s\) to be decrypted\. If the object\(s\) were encrypted using an Amazon S3\-provided key leave this option set to the default value, *Not using server\-side encryption, or encrypted using an Amazon S3 managed key*\.
+When you retrieve an object from Amazon S3 that was encrypted by using server\-side encryption with customer\-provided encryption keys \(SSE\-C\), set *Use customer\-provided encryption key* and provide the customer key data to enable the objects to be decrypted\. If the objects were encrypted using an Amazon S3\-provided key leave this option set to the default value, *Not using server\-side encryption, or encrypted using an Amazon S3 managed key*\.
 
 #### Customer Key<a name="customer-key"></a>
 
@@ -63,7 +63,7 @@ Available, and required, when *Encryption Key Management* is set to *Use custome
 
 #### Overwrite<a name="overwrite"></a>
 
-If selected the download replaces existing files in and beneath the target folder\. If not selected and the file already exists in the target location, an error is thrown\.
+Changing this checkbox has no effect\. If a file \(an Amazon S3 object\) with the same name already exists in the Amazon S3 bucket, it will always be overwritten\.
 
 #### Force path style addressing<a name="force-path-style-addressing"></a>
 
@@ -73,11 +73,12 @@ For more information see [Virtual Hosting of Buckets](https://docs.aws.amazon.co
 
 #### Flatten folders<a name="flatten-folders"></a>
 
-If selected the task will remove the key prefix from the downloaded objects causing them to be written to the selected download folder without subpaths\.
+If selected, the task will remove the key prefix from the downloaded objects causing them to be written to the selected download folder without subpaths\.
 
 If this option is unchecked, the key prefix of each object is preserved and objects are downloaded to a subfolder hierarchy matching the key prefix of the object\.
 
- **Note:** if folder flattening is selected and multiple objects, with the same name but different key prefixes, exist in the download set an error will be thrown by the task if the *Overwrite* option is not selected\.
+**Note**  
+If folder flattening is selected and multiple objects with the same name but different key prefixes exist in the download set, earlier objects will be overwritten with later objects\.
 
 ## Task Permissions<a name="task-permissions"></a>
 

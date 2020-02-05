@@ -29,7 +29,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resources the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -51,7 +51,7 @@ This field is only available when Read Mode is set to get a single parameter val
 
 ### Parameter Path<a name="parameter-path"></a>
 
-The path hierarchy for the parameter\(s\) to be read\. Hierarchies start with, and are separated by, a forward slash \(/\) and may contain up to five levels\. The path hierarchy can identify a specific parameter in the hierarchy by appending the parameter name, or can identify a group of parameters sharing the hierarchy path\. If the supplied hierarchy contains multiple parameters, all parameter values in the hierarchy are downloaded\.
+The path hierarchy for the parameters to be read\. Hierarchies start with, and are separated by, a forward slash \(/\) and may contain up to five levels\. The path hierarchy can identify a specific parameter in the hierarchy by appending the parameter name, or can identify a group of parameters sharing the hierarchy path\. If the supplied hierarchy contains multiple parameters, all parameter values in the hierarchy are downloaded\.
 
  **Note:** *SecureString* parameters found in a hierarchy will be automatically set as secret variables\.
 
@@ -63,7 +63,7 @@ Available when reading a parameter hierarchy\. If selected then parameter values
 
 ### Variable Name Transform<a name="variable-name-transform"></a>
 
-Specifies how the build variable name\(s\) to hold the parameter value\(s\) are created\. You can choose from
+Specifies how the build variable names to hold the parameter values are created\. You can choose from
 + Use parameter names \(including any paths\) as variable names\. The full parameter name is used to set the build variable name\.
 + Use leaf of parameter names as variable names\. The path is removed and the resulting leaf text is used as the build variable name\.
 + Replace text in the parameter name using a regular expression to form the build variable name\.

@@ -29,7 +29,7 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resources the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
 If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
 
@@ -43,7 +43,7 @@ The name of the Amazon S3 bucket to which the content will be uploaded\. If the 
 
 ### Source Folder<a name="source-folder"></a>
 
-The source folder that the filename selection pattern\(s\) will be run against\. If not set the root of the work area is assumed\. You can also use [variables](https://go.microsoft.com/fwlink/?LinkID=550988) to specify the folder\.
+The source folder that the filename selection patterns will be run against\. If not set the root of the work area is assumed\. You can also use [variables](https://go.microsoft.com/fwlink/?LinkID=550988) to specify the folder\.
 
 Example: code:*$\(Build\.ArtifactStagingDirectory\)* 
 
@@ -71,7 +71,7 @@ If checked and the specified bucket does not exist, the task attempts to automat
 
 You can optionally request Amazon S3 to encrypt data at rest using server\-side encryption\. Server\-side encryption is about data encryption at rest, that is, Amazon S3 encrypts your data as it writes it to disks in its data centers and decrypts it for you when you access it\.
 
-Select *Use AWS\-managed encryption keys* if you want Amazon S3 to manage keys used to encrypt data\. To manage and provide your own keys select *Use customer\-provided encryption keys*\. Selecting *Not using server\-side encryption* disables server\-side encryption for the uploaded object\(s\)\.
+Select *Use AWS\-managed encryption keys* if you want Amazon S3 to manage keys used to encrypt data\. To manage and provide your own keys select *Use customer\-provided encryption keys*\. Selecting *Not using server\-side encryption* disables server\-side encryption for the uploaded objects\.
 
 #### Encryption Algorithm<a name="encryption-algorithm"></a>
 
@@ -93,7 +93,7 @@ This field is required when *Encryption Key Management* is set to *Use customer\
 
 #### Overwrite<a name="overwrite"></a>
 
-If selected existing files \(Amazon S3 objects\) in the bucket at the target location are overwritten\.
+Changing this checkbox has no effect\. If a file \(an Amazon S3 object\) with the same name already exists in the Amazon S3 bucket, it will always be overwritten\.
 
 #### Flatten Folders<a name="flatten-folders"></a>
 

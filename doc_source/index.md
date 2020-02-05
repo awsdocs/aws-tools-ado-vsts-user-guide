@@ -1,7 +1,7 @@
 # AWS Tools for Microsoft Visual Studio Team Services User Guide
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -41,4 +41,10 @@ Amazon's trademarks and trade dress may not be used in
    + [AWS SSM Get Parameter Task](systemsmanager-getparameter.md)
    + [AWS SSM Set Parameter Task](systemsmanager-setparameter.md)
    + [AWS SSM Run Command Task](systemsmanager-runcommand.md)
++ [Security for this AWS Product or Service](security.md)
+   + [Data Protection in this AWS Product or Service](data-protection.md)
+   + [Identity and Access Management for this AWS Product or Service](security-iam.md)
+   + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
+   + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
+   + [Infrastructure Security for this AWS Product or Service](infrastructure-security.md)
 + [Document History for AWS Tools for Microsoft Visual Studio Team Services](document-history.md)

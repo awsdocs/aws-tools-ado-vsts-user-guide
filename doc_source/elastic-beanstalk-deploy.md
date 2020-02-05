@@ -29,11 +29,11 @@ You can specify credentials using a service endpoint \(of type AWS\) in the task
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resource\(s\) the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS Region code \(us\-east\-1, us\-west\-2 etc\.\) of the Region containing the AWS resources the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
 
-If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
+If a Region is not specified in the task configuration, the task will attempt to obtain the Region to be used by using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the Region by using the instance metadata associated with the EC2 instance if no Region is configured on the task or set in the environment variable\.
 
- **Note:** The regions listed in the picker are those known at the time this software was released\. New regions that are not listed may still be used by entering the *region code* of the region \(for example *us\_west\_2*\)\.
+ **Note:** The Regions listed in the picker are those known at the time this software was released\. New Regions that are not listed can still be used by entering the *Region code* of the Region \(for example *us\_west\_2*\)\.
 
 ### Application Name\*<a name="application-name"></a>
 
@@ -59,9 +59,9 @@ Required if `Deployment Bundle Type` is set to **ASP\.NET**\. The path to the we
 
 ### Published Application Path<a name="published-application-path"></a>
 
-Required if `Deployment Bundle Type` is set to **ASP\.NET Core**\. The output location where the `dotnet publish` command in your previous build steps placed the deployment artifact\(s\) to be published\. Configure using either:
-+ The path to the output folder containing the artifacts\. Use this if the `dotnet publish` command in your build was configured to not create a zip file of the published application\.
-+ The path and filename of the zip file containing the artifacts\. Use this if the `dotnet publish` command in your build was configured to create a zip file of the application artifacts\.
+Required if `Deployment Bundle Type` is set to **ASP\.NET Core**\. The output location where the `dotnet publish` command in your previous build steps placed the deployment artifacts to be published\. Configure using either:
++ The path to the output folder containing the artifacts\. Use this if the `dotnet publish` command in your build was configured to not create a \.zip file of the published application\.
++ The path and filename of the \.zip file containing the artifacts\. Use this if the `dotnet publish` command in your build was configured to create a \.zip file of the application artifacts\.
 
 ### Deployment Bundle Bucket<a name="deployment-bundle-bucket"></a>
 

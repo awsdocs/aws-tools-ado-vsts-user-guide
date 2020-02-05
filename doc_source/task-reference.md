@@ -15,7 +15,7 @@ You can do one of the following:
 + Supply credentials and region to tasks using environment variables in the process hosting the build agent\.
 + If your build agent is running on an Amazon EC2 instance you can also elect to have credentials \(and region\) be obtained automatically from the instance metadata associated with the instance\. For credentials to be available from EC2 instance metadata the instance must have been started with an instance profile referencing a role granting permissions to the task to make calls to AWS on your behalf\. See [Using an IAM Role to Grant Permissions to Applications Running on Amazon EC2 Instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) for more information
 
- **Note:** If you choose to use an AWS Service Endpoint to supply credentials to tasks we strongly recommend using an AWS Identity and Access Management user account, with appropriate permissions to scope the privileges of the user account to only those needed to execute the task\(s\) you need\.
+ **Note:** If you choose to use an AWS Service Endpoint to supply credentials to tasks we strongly recommend using an AWS Identity and Access Management user account, with appropriate permissions to scope the privileges of the user account to only those needed to execute the tasks you need\.
 
 **Topics**
 + [AWS CLI](aws-cli.md)

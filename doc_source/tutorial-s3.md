@@ -64,7 +64,7 @@ Team Services provides a [number of variables](https://go.microsoft.com/fwlink/?
   Select this checkbox if the target bucket doesn't exist\. The task will fail if the bucket cannot be created for some reason \(not a unique name, lack of permissions, etc\.\)\.
 + **Overwrite** \(in the **Advanced** section\)
 
-  Select this checkbox to overwrite existing files in the bucket\.
+  Changing this checkbox has no effect\. If a file with the same name already exists in the Amazon S3 bucket, it will always be overwritten\.
 + **Flatten folders** \(in the **Advanced** section\)
 
   Select this checkbox if you wish to flatten the folder structure\. All files will be placed into the specified target folder in the bucket, removing their relative paths to the source folder\.

@@ -6,6 +6,7 @@ The following table describes important changes to the AWS Tools for Microsoft V
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [Security Content](security.md) | Added security content\. | February 4, 2020 | 
 | [Refresh](#document-history) | Screenshots with relevant content and task names were refreshed for user\-interface updates\. | June 18, 2019 | 
 | [AWS CloudFormation Create/Update Stack Task](cloudformation-create-update.md) | Added information about the option to log warning messages when no changes are reported\. | March 29, 2019 | 
 | [Amazon Elastic Container Registry Push Image](ecr-pushimage.md) | Added permission requirements to the task\. | July 25, 2018 | 

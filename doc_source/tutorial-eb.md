@@ -10,7 +10,9 @@ The following tutorial demonstrates how to use the *AWS Elastic Beanstalk Deploy
 
 ## Deploying an ASP\.NET Application Using the AWS Elastic Beanstalk Deploy Application Task<a name="deploying-an-asp-net-application-using-the-aeblong-deployment-task"></a>
 
-Create a new VSTS project and add a new pipeline to the project based on the *ASP\.NET Core \(\.NET Framework\)* template, which will produce a Web Deploy archive for deployment\. To follow along with the screenshots shown below, use the classic editor \(that is, without YAML\)\.
+Create a new VSTS project and upload your *ASP\.NET Web Application \(\.NET Framework\)* or *ASP\.NET Core Web Application* files to it\.
+
+Then, add a new pipeline to the project based on the *ASP\.NET Core \(\.NET Framework\)* template, which will produce a Web Deploy archive for deployment\. To follow along with the screenshots shown below, use the classic editor \(that is, without YAML\)\.
 
 ![\[New build pipeline using classic editor\]](http://docs.aws.amazon.com/vsts/latest/userguide/images/use-classic-editor.png)
 
