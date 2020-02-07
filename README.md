@@ -1,6 +1,6 @@
 ## User Guide of the AWS Tools for Microsoft Visual Studio Team Services
 
-The open source version of the user guide for the AWS Tools for Microsoft Visual Studio Team Services. For easy navigation, start in the [index](https://github.com/awsdocs/aws-tools-ado-vsts-user-guide/blob/master/doc_source/index.md).
+The open source version of the user guide for the AWS Tools for Microsoft Visual Studio Team Services. For easy navigation, start in the [index](doc_source/index.md).
 
 This repository contains source content for the official [AWS Tools for Microsoft Visual Studio Team Services User Guide](https://docs.aws.amazon.com/vsts/latest/userguide/welcome.html).
 
