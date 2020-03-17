@@ -1,4 +1,4 @@
-# AWS Tools for Microsoft Visual Studio Team Services User Guide
+# AWS Toolkit for Microsoft Azure DevOps User Guide
 
 -----
 *****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,9 +14,9 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [AWS Tools for Microsoft Visual Studio Team Services](welcome.md)
++ [AWS Toolkit for Microsoft Azure DevOps](welcome.md)
 + [Getting Started](getting-started.md)
-+ [Using the AWS Tools for VSTS](tutorials.md)
++ [Using the AWS Toolkit for Azure DevOps](tutorials.md)
    + [Archiving Build Artifacts to AWS](tutorial-s3.md)
    + [Deploying an ASP.NET Web App to AWS](tutorial-eb.md)
 + [Task Reference](task-reference.md)
@@ -47,4 +47,4 @@ Amazon's trademarks and trade dress may not be used in
    + [Compliance Validation for this AWS Product or Service](compliance-validation.md)
    + [Resilience for this AWS Product or Service](disaster-recovery-resiliency.md)
    + [Infrastructure Security for this AWS Product or Service](infrastructure-security.md)
-+ [Document History for AWS Tools for Microsoft Visual Studio Team Services](document-history.md)
++ [Document History for AWS Toolkit for Microsoft Azure DevOps](document-history.md)

@@ -1,8 +1,8 @@
-# AWS Tools for Microsoft Visual Studio Team Services<a name="welcome"></a>
+# AWS Toolkit for Microsoft Azure DevOps<a name="welcome"></a>
 
-AWS Tools for Microsoft Visual Studio Team Services is an extension for Visual Studio Team Services \(VSTS\)\. It contains tasks you can use in build and release definitions in VSTS and Microsoft Team Foundation Server \(TFS\) to interact with AWS services\. AWS Tools for VSTS is available through the Visual Studio Marketplace\. See the [Getting Started](getting-started.md) topic for more information\.
+AWS Toolkit for Microsoft Azure DevOps is an extension for Microsoft Azure DevOps \(formerly VSTS\)\. It contains tasks you can use in build and release definitions in Azure DevOps and Microsoft Azure DevOps Server \(previously named Visual Studio Team Foundation Server\) to interact with AWS services\. AWS Toolkit for Azure DevOps is available through the Visual Studio Marketplace\. See the [Getting Started](getting-started.md) topic for more information\.
 
-You can use these tasks in a VSTS project or in an on\-premises Team Foundation Server environment\. The available AWS tasks include:
+You can use these tasks in an Azure DevOps project or in an on\-premises Azure DevOps Server environment\. The available AWS tasks include:
 
 
 **Deployment tasks**  
@@ -39,16 +39,16 @@ You can use these tasks in a VSTS project or in an on\-premises Team Foundation 
 
 ## What's in This Guide<a name="what-s-in-this-guide"></a>
 
-The AWS Tools for VSTS User Guide describes how to install and use the AWS Tools for VSTS\.
+The AWS Toolkit for Azure DevOps User Guide describes how to install and use the AWS Toolkit for Azure DevOps\.
 
  [Getting Started](getting-started.md) 
 
-How to set up an AWS account and install the AWS Tools for VSTS\. Also how to set up AWS credentials for use in the tasks, which can be accomplished using service endpoints, environment variables, or Amazon EC2 instance metadata \(for build agents running on Amazon EC2 instances\)\.
+How to set up an AWS account and install the AWS Toolkit for Azure DevOps\. Also how to set up AWS credentials for use in the tasks, which can be accomplished using service endpoints, environment variables, or Amazon EC2 instance metadata \(for build agents running on Amazon EC2 instances\)\.
 
- [Using the AWS Tools for VSTS](tutorials.md) 
+ [Using the AWS Toolkit for Azure DevOps](tutorials.md) 
 
-Walk\-through topics demonstrating how to use tasks in the AWS Tools for VSTS in your build and release definitions\.
+Walk\-through topics demonstrating how to use tasks in the AWS Toolkit for Azure DevOps in your build and release definitions\.
 
  [Task Reference](task-reference.md) 
 
-Describes the tasks included in the AWS Tools for VSTS\.
+Describes the tasks included in the AWS Toolkit for Azure DevOps\.

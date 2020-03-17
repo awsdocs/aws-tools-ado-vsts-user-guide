@@ -1,14 +1,14 @@
-# Using the AWS Tools for VSTS<a name="tutorials"></a>
+# Using the AWS Toolkit for Azure DevOps<a name="tutorials"></a>
 
-The following tutorials demonstrate how to use tasks from the AWS Tools for Microsoft Visual Studio Team Services in your VSTS projects\.
+The following tutorials demonstrate how to use tasks from the AWS Toolkit for Microsoft Azure DevOps in your Azure DevOps projects\.
 
  **Prerequisites** 
-+ Either a VSTS account or on\-premises Team Foundation Server\.
++ Either an Azure DevOps account or on\-premises Azure DevOps Server\.
 + An AWS account and preferably an associated IAM user account\.
 + Task specific permissions\.
-+ A VSTS project with the build definition template specified in each tutorial\.
++ An Azure DevOps project with the build definition template specified in each tutorial\.
 
-See [Getting Started](getting-started.md) for instructions to install the AWS Tools for VSTS and set up your credentials\.
+See [Getting Started](getting-started.md) for instructions to install the AWS Toolkit for Azure DevOps and set up your credentials\.
 
 **Topics**
 + [Archiving Build Artifacts to AWS](tutorial-s3.md)

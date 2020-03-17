@@ -1,22 +1,22 @@
 # Getting Started<a name="getting-started"></a>
 
-This section provides information about how to install, set up, and use the AWS Tools for Microsoft Visual Studio Team Services\.
+This section provides information about how to install, set up, and use the AWS Toolkit for Microsoft Azure DevOps\.
 
-## Set up a VSTS Account<a name="set-up-a-vsts-account"></a>
+## Set up an Azure DevOps Account<a name="set-up-a-vsts-account"></a>
 
-To use [Visual Studio Team Services \(VSTS\)](https://visualstudio.microsoft.com/team-services/), you will first need to [sign up for a Visual Studio Team Services Account](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops)\.
+To use [Azure DevOps](https://visualstudio.microsoft.com/team-services/), you will first need to [sign up for an Azure DevOps Account](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops)\.
 
-## Install the AWS Tools for VSTS Extension<a name="install-the-aws-tools-for-vsts-extension"></a>
+## Install the AWS Toolkit for Azure DevOps Extension<a name="install-the-aws-tools-for-vsts-extension"></a>
 
-Go to the relevant [Visual Studio Marketplace](https://marketplace.visualstudio.com/) and search for *AWS Tools for Microsoft Visual Studio Team Services*\. \(The following URL is a direct link to the AWS Tools for VSTS: [https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools)\.\)
+Go to the relevant [Visual Studio Marketplace](https://marketplace.visualstudio.com/) and search for *AWS Toolkit for Microsoft Azure DevOps*\. \(The following URL is a direct link to the AWS Toolkit for Azure DevOps: [https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools](https://marketplace.visualstudio.com/items?itemName=AmazonWebServices.aws-vsts-tools)\.\)
 
-Choose **Get it free** and sign in to your VSTS account if prompted\. Then choose **Install** to install into your VSTS account, or choose **Download** to install into an on\-premises server\.
+Choose **Get it free** and sign in to your Azure DevOps account if prompted\. Then choose **Install** to install into your Azure DevOps account, or choose **Download** to install into an on\-premises server\.
 
-![\[Download Team Services Extension\]](http://docs.aws.amazon.com/vsts/latest/userguide/images/AWSVSTSdownload.png)<a name="setup-credentials"></a>
+![\[Download AWS Toolkit for Azure DevOps\]](http://docs.aws.amazon.com/vsts/latest/userguide/images/AWSVSTSdownload.png)<a name="setup-credentials"></a>
 
-## Establish AWS Credentials for the AWS Tools for VSTS<a name="set-up-aws-credentials-for-the-aws-tools-for-vsts"></a>
+## Establish AWS Credentials for the AWS Toolkit for Azure DevOps<a name="set-up-aws-credentials-for-the-aws-tools-for-vsts"></a>
 
-To use the AWS Tools for VSTS to access AWS, you need an AWS account and AWS credentials\. When build agents run the tasks contained in the tools, the tasks must be configured with, or have access to, those AWS credentials to enable them to call AWS service APIs\. To increase the security of your AWS account, we recommend that you do not use your root account credentials, but rather create an *IAM user* to provide access credentials to the tasks running in the build agent processes\.
+To use the AWS Toolkit for Azure DevOps to access AWS, you need an AWS account and AWS credentials\. When build agents run the tasks contained in the tools, the tasks must be configured with, or have access to, those AWS credentials to enable them to call AWS service APIs\. To increase the security of your AWS account, we recommend that you do not use your root account credentials, but rather create an *IAM user* to provide access credentials to the tasks running in the build agent processes\.
 
 **Note**  
 For an overview of IAM users and why they are important for the security of your account, see [Overview of Identity Management: Users](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction_identity-management.html) in the *IAM User Guide*\.
@@ -29,7 +29,7 @@ For an overview of IAM users and why they are important for the security of your
 
 **Create an IAM User and Download Its Credentials**
 
-Next, create an IAM user and download \(or copy\) its credentials\. To use the AWS Tools for VSTS, you must have a set of valid AWS credentials, which consist of an access key and a secret key\. These keys are used to sign programmatic web service requests and enable AWS to verify that the request comes from an authorized source\. You can obtain a set of account credentials when you create your account\. However, we recommend that you do not use these credentials with AWS Tools for VSTS\. Instead, [create one or more IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SettingUpUser.html), and use those credentials\.
+Next, create an IAM user and download \(or copy\) its credentials\. To use the AWS Toolkit for Azure DevOps, you must have a set of valid AWS credentials, which consist of an access key and a secret key\. These keys are used to sign programmatic web service requests and enable AWS to verify that the request comes from an authorized source\. You can obtain a set of account credentials when you create your account\. However, we recommend that you do not use these credentials with AWS Toolkit for Azure DevOps\. Instead, [create one or more IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SettingUpUser.html), and use those credentials\.
 
 1. Open the [IAM console](https://console.aws.amazon.com/iam/home) \(you may need to sign in to AWS first\)\.
 

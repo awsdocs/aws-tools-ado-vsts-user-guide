@@ -1,16 +1,16 @@
 # Archiving Build Artifacts to AWS<a name="tutorial-s3"></a>
 
-The following tutorial demonstrates how to use the *AWS S3 Upload* task to upload archival data to an Amazon Simple Storage Service \(Amazon S3\) bucket from a Visual Studio Team Services \(VSTS\) build definition\.
+The following tutorial demonstrates how to use the *AWS S3 Upload* task to upload archival data to an Amazon Simple Storage Service \(Amazon S3\) bucket from an Azure DevOps build definition\.
 
 ## Prerequisites<a name="prerequisites"></a>
-+ The AWS Tools for VSTS installed in VSTS or an on\-premises Team Foundation Server\.
++ The AWS Toolkit for Azure DevOps installed in Azure DevOps or an on\-premises Azure DevOps Server\.
 + An AWS account and preferably an associated IAM user account\.
 + An existing S3 bucket or a unique S3 bucket name to use during this procedure\.
-+ A code project for an *ASP\.NET Core Web Application*, which you will push to your VSTS project\.
++ A code project for an *ASP\.NET Core Web Application*, which you will push to your Azure DevOps project\.
 
 ## Archiving Build Artifacts with the AWS S3 Upload Task<a name="archiving-build-artifacts-with-the-aws-s3-upload-task"></a>
 
-Create a new VSTS project and add a new pipeline to the project based on the *ASP\.NET Core* template\. To follow along with the screenshots shown below, use the classic editor \(that is, without YAML\)\.
+Create a new Azure DevOps project and add a new pipeline to the project based on the *ASP\.NET Core* template\. To follow along with the screenshots shown below, use the classic editor \(that is, without YAML\)\.
 
 ![\[New build pipeline using classic editor\]](http://docs.aws.amazon.com/vsts/latest/userguide/images/use-classic-editor.png)
 
@@ -52,7 +52,7 @@ We recommend that you do not use your account's root credentials\. Instead, crea
 
   This field points to a folder in your build area that contains the content to be uploaded\. For this walkthrough, use the variable "`$(Build.ArtifactStagingDirectory)`" \(without the quotes\)\. This is the same variable that is specified by default in the *Publish* task \(the `--output` argument\), as well as in other tasks\.
 **Note**  
-Team Services provides a [number of variables](https://go.microsoft.com/fwlink/?LinkID=550988) that you can use to avoid hard\-coded paths\.
+Azure DevOps provides a [number of variables](https://go.microsoft.com/fwlink/?LinkID=550988) that you can use to avoid hard\-coded paths\.
 + **Filename Patterns**
 
   This field can contain one or more globbing patterns used to select files under the **Source Folder** for upload\. The default value "\*\*" selects all files recursively\. Multiple patterns can be specified, one per line\. For this walkthrough, the *Publish* task, which precedes the *S3 Upload* task, emits a zip file that contains the build, which is the file that will be uploaded\.

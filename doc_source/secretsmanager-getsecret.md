@@ -6,7 +6,7 @@ Stores the value of a secret in AWS Secrets Manager into a secret build variable
 
 ## Description<a name="description"></a>
 
-Use this task to retrieve the value of a secret stored in AWS Secrets Manager and store it locally in a Team Services build variable\. The build variable will be automatically set to 'secret' mode to automatically mask the value when logged or otherwise displayed\.
+Use this task to retrieve the value of a secret stored in AWS Secrets Manager and store it locally in an Azure DevOps build variable\. The build variable will be automatically set to 'secret' mode to automatically mask the value when logged or otherwise displayed\.
 
 ## Parameters<a name="parameters"></a>
 

@@ -1,16 +1,16 @@
 # Deploying an ASP\.NET Web App to AWS<a name="tutorial-eb"></a>
 
-The following tutorial demonstrates how to use the *AWS Elastic Beanstalk Deploy Application* task to deploy a web application to the AWS Cloud from a Visual Studio Team Services \(VSTS\) build definition\.
+The following tutorial demonstrates how to use the *AWS Elastic Beanstalk Deploy Application* task to deploy a web application to the AWS Cloud from an Azure DevOps build definition\.
 
 ## Prerequisites<a name="prerequisites"></a>
-+ The AWS Tools for VSTS installed in VSTS or an on\-premises Team Foundation Server\.
++ The AWS Toolkit for Azure DevOps installed in Azure DevOps or an on\-premises Azure DevOps Server\.
 + An AWS account and preferably an associated IAM user account\.
 + An AWS Elastic Beanstalk application and environment\.
-+ A code project for an *ASP\.NET Web Application \(\.NET Framework\)* or an *ASP\.NET Core Web Application*, which you will push to your VSTS project\.
++ A code project for an *ASP\.NET Web Application \(\.NET Framework\)* or an *ASP\.NET Core Web Application*, which you will push to your Azure DevOps project\.
 
 ## Deploying an ASP\.NET Application Using the AWS Elastic Beanstalk Deploy Application Task<a name="deploying-an-asp-net-application-using-the-aeblong-deployment-task"></a>
 
-Create a new VSTS project and upload your *ASP\.NET Web Application \(\.NET Framework\)* or *ASP\.NET Core Web Application* files to it\.
+Create a new Azure DevOps project and upload your *ASP\.NET Web Application \(\.NET Framework\)* or *ASP\.NET Core Web Application* files to it\.
 
 Then, add a new pipeline to the project based on the *ASP\.NET Core \(\.NET Framework\)* template, which will produce a Web Deploy archive for deployment\. To follow along with the screenshots shown below, use the classic editor \(that is, without YAML\)\.
 
@@ -58,7 +58,7 @@ We recommend that you do not use your account's root credentials\. Instead, crea
 
   If, for example, the project was set up according to the instructions here, the value for this field will be "`$(build.artifactstagingdirectory)\WebApp.zip`" \(without the quotes\)\.
 **Note**  
-Team Services provides a [number of variables](https://go.microsoft.com/fwlink/?LinkID=550988) that you can use to avoid hard\-coded paths\.
+Azure DevOps provides a [number of variables](https://go.microsoft.com/fwlink/?LinkID=550988) that you can use to avoid hard\-coded paths\.
 + **Event poll delay \(seconds\)**
 
   The time, in seconds, to wait between calls to retrieve the latest events from the deployment to the environment\. The default is 5 seconds\. For large deployments or slow connections, you might need to increase this value\.
