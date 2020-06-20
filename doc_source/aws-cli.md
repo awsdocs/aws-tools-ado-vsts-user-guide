@@ -89,3 +89,19 @@ If true, this task fails if any errors are written to the StandardError stream\.
 ## Task Permissions<a name="task-permissions"></a>
 
 Permissions for this task to call AWS service APIs depend on the configured command\.
+
+## Examples<a name="aws-properties-aws-cli--examples"></a>
+
+### Azure Pipelines get caller identity AWS cli task<a name="aws-properties-aws-cli--examples--Azure_Pipelines_get_caller_identity_AWS_cli_task"></a>
+
+#### YAML<a name="aws-properties-aws-cli--examples--Azure_Pipelines_get_caller_identity_AWS_cli_task--yaml"></a>
+
+```
+- task: AWSCLI@1
+  inputs:
+    awsCredentials: 'service-connection-name'
+    regionName: 'us-east-1'
+    awsCommand: 'sts'
+    awsSubCommand: 'get-caller-identity'
+    failOnStandardError: true
+```
