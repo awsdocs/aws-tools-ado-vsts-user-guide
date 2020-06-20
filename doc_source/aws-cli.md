@@ -11,14 +11,14 @@ To declare this entity in your Azure Pipelines template, use the following synta
 ### YAML<a name="aws-properties-aws-cli-syntax.yaml"></a>
 
 ```
-  - task: AWSCLI@1
-    inputs:
-      [awsCredentials](#aws-credentials): String
-      [regionName](#aws-region): String 
-      [awsCommand](#command): String
-      [awsSubCommand](#subcommand): String
-      [awsArguments](#options-and-parameters): String
-      [failOnStandardError](#fail-on-standard-error): Boolean
+- task: AWSCLI@1
+  inputs:
+    [awsCredentials](#aws-credentials): String
+    [regionName](#aws-region): String 
+    [awsCommand](#command): String
+    [awsSubCommand](#subcommand): String
+    [awsArguments](#options-and-parameters): String
+    [failOnStandardError](#fail-on-standard-error): Boolean
 ```
 
 ## Description<a name="description"></a>
