@@ -17,6 +17,7 @@ To declare this entity in your Azure Pipelines template, use the following synta
       [regionName](#aws-region): String 
       [awsCommand](#command): String
       [awsSubCommand](#subcommand): String
+      [awsArguments](#options-and-parameters): String
       [failOnStandardError](#fail-on-standard-error): Boolean
 ```
 
