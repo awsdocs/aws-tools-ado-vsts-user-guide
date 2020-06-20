@@ -4,6 +4,22 @@
 
 Runs a command using the AWS CLI\. Note that you must have the AWS CLI installed to use this task\. See [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html) for more details\.
 
+## Syntax<a name="aws-properties-aws-cli-syntax"></a>
+
+To declare this entity in your Azure Pipelines template, use the following syntax:
+
+### YAML<a name="aws-properties-aws-cli-syntax.yaml"></a>
+
+```
+  - task: AWSCLI@1
+    inputs:
+      [awsCredentials](#aws-credentials): String
+      [regionName](#aws-region): String 
+      [awsCommand](#command): String
+      [awsSubCommand](#subcommand): String
+      [failOnStandardError](#fail-on-standard-error): Boolean
+```
+
 ## Description<a name="description"></a>
 
 The AWS CLI uses a multipart structure on the command line\. It starts with the base call to AWS\. The next part specifies a top\-level command, which often represents an AWS service that the AWS CLI supports\. Each AWS service has additional subcommands that specify the operation to perform\. You can specify the general AWS CLI options, or the specific parameters for an operation, in any order on the command line\. If you specify an exclusive parameter multiple times, only the last value applies\.
