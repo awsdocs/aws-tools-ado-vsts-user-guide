@@ -63,6 +63,10 @@ Optional tag for the new image in the repository\. If not specified, ECR will as
 
 If checked, the task will check to see if the repository exists and if it does not, will attempt to create it\.
 
+### Force repository name to follow Docker naming conventions
+
+If enabled, the Docker repository name will be modified to follow Docker naming conventions. Converts upper case characters to lower case. Removes all characters except 0-9, -, . and _ .
+
 ### Image Tag Output Variable<a name="image-tag-output-variable"></a>
 
 The name of a build variable that will be created or updated with the pushed image reference\. The image tag will be of the form *aws\_account\_id\.dkr\.ecr\.region\.amazonaws\.com/imagename*, where **imagename** is in the format *repositoryname\[:tag\]* 
