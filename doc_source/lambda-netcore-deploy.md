@@ -1,4 +1,4 @@
-# AWS Lambda \.NET Core Task<a name="lambda-netcore-deploy"></a>
+# AWS Lambda \.NET Core task<a name="lambda-netcore-deploy"></a>
 
 ## Synopsis<a name="synopsis"></a>
 
@@ -25,15 +25,15 @@ Specifies the AWS credentials to be used by the task in the build agent environm
 You can specify credentials using a service endpoint \(of type AWS\) in the task configuration or you can leave unspecified\. If unspecified the task will attempt to obtain credentials from the following sources in order:
 + From task variables named *AWS\.AccessKeyID*, *AWS\.SecretAccessKey* and optionally *AWS\.SessionToken*\.
 + From credentials set in environment variables in the build agent process\. When using environment variables in the build agent process you may use the standard AWS environment variables: *AWS\_ACCESS\_KEY\_ID*, *AWS\_SECRET\_ACCESS\_KEY* and optionally *AWS\_SESSION\_TOKEN*\.
-+ If the build agent is running on an Amazon EC2 instance, from the instance metadata associated with the EC2 instance\. For credentials to be available from EC2 instance metadata the instance must have been started with an instance profile referencing a role granting permissions to the task to make calls to AWS on your behalf\. See [IAMRolesForEC2](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html) for more information\.
++ If the build agent is running on an Amazon EC2 instance, from the instance metadata associated with the EC2 instance\. For credentials to be available from EC2 instance metadata the instance must have been started with an instance profile referencing a role granting permissions to the task to make calls to AWS on your behalf\. For more information, see [Using an IAM role to grant permissions to applications running on Amazon EC2 instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html)\.
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS region code \(us\-east\-1, us\-west\-2 etc\.\) of the region containing the AWS resources the task will use or create\. For more information, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the Amazon Web Services General Reference\.
+The AWS Region code \(for example, us\-east\-1, us\-west\-2\) of the Region containing the AWS resources the task will use or create\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
 
-If a region is not specified in the task configuration the task will attempt to obtain the region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the region using the instance metadata associated with the EC2 instance if no region is configured on the task or set in the environment variable\.
+If a Region is not specified in the task configuration the task will attempt to obtain the Region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the Region using the instance metadata associated with the EC2 instance if no Region is configured on the task or set in the environment variable\.
 
- **Note:** The regions listed in the picker are those known at the time this software was released\. New regions that are not listed may still be used by entering the *region code* of the region \(for example *us\_west\_2*\)\.
+ **Note:** The Regions listed in the picker are those known at the time this software was released\. New Regions that are not listed may still be used by entering the *region code* of the Region \(for example, *us\_west\_2*\)\.
 
 ### Deployment Type\*<a name="deployment-type"></a>
 
@@ -45,15 +45,15 @@ The type of deployment to perform, or package to build or deploy\.
 
 ### Create deployment package only<a name="create-deployment-package-only"></a>
 
-If selected the task creates the outputs for the selected deployment type but does not perform the deployment to AWS lambda or AWS CloudFormation\.
+If selected the task creates the outputs for the selected deployment type but does not perform the deployment to AWS Lambda or AWS CloudFormation\.
 
 ### Package\-only output file<a name="package-only-output-file"></a>
 
 Available when *Create deployment package only* is selected\.
 
-When *Deployment Type* is set to *Function* specifies the output folder and filename of the packaged zip file\. This zip file can then be used with the *AWS Lambda Deploy Function* task to perform the deployment at a later stage\.
+When *Deployment Type* is set to *Function* specifies the output folder and filename of the packaged `.zip` file\. This `.zip` file can then be used with the *AWS Lambda Deploy Function* task to perform the deployment at a later stage\.
 
-When *Deployment Type* is set to *Serverless Application* specifies the output folder and filename where the serverless template file, updated to contain the Amazon S3 location of the built project code and artifacts, will be placed\. This updated template can then be used with the *AWS CloudFormation Create/Update Stack* task, or AWS CloudFormation change set tasks, to perform the deployment at a later stage\.
+When *Deployment Type* is set to *Serverless Application* specifies the output folder and file name where the serverless template file, updated to contain the Amazon S3 location of the built project code and artifacts, will be placed\. This updated template can then be used with the *AWS CloudFormation Create/Update Stack* task, or AWS CloudFormation change set tasks, to perform the deployment at a later stage\.
 
 ### Path to Lambda Project\*<a name="path-to-lam-project"></a>
 

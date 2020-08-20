@@ -1,8 +1,8 @@
 # AWS Toolkit for Microsoft Azure DevOps<a name="welcome"></a>
 
-AWS Toolkit for Microsoft Azure DevOps is an extension for Microsoft Azure DevOps \(formerly VSTS\)\. It contains tasks you can use in build and release definitions in Azure DevOps and Microsoft Azure DevOps Server \(previously named Visual Studio Team Foundation Server\) to interact with AWS services\. AWS Toolkit for Azure DevOps is available through the Visual Studio Marketplace\. See the [Getting Started](getting-started.md) topic for more information\.
+AWS Toolkit for Microsoft Azure DevOps is an extension for Microsoft Azure DevOps \(formerly known as Visual Studio Team Services or VSTS\)\. It contains tasks you can use in build and release definitions in Azure DevOps and Microsoft Azure DevOps Server \(previously named Visual Studio Team Foundation Server\) to interact with AWS services\. AWS Toolkit for Azure DevOps is available through the Visual Studio Marketplace\. See the [Getting started](getting-started.md) topic for more information\.
 
-You can use these tasks in an Azure DevOps project or in an on\-premises Azure DevOps Server environment\. The available AWS tasks include:
+You can use these tasks in an Azure DevOps project or in an on\-premises Azure DevOps Server environment\. The available AWS tasks include the following\.
 
 
 **Deployment tasks**  
