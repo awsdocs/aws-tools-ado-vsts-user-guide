@@ -1,4 +1,4 @@
-# Document History for AWS Toolkit for Microsoft Azure DevOps<a name="document-history"></a>
+# Document history for AWS Toolkit for Microsoft Azure DevOps<a name="document-history"></a>
 
 *Last documentation update:* June 18, 2019
 
