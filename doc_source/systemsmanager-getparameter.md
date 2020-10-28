@@ -30,7 +30,7 @@ Get values for parameter hierarchy:
     awsCredentials: 'awsCredentials'
     regionName: 'us-west-2'
     readMode: 'hierarchy'
-    parameterPath: 'parameter/heirarchy/path'
+    parameterPath: 'parameter/hierarchy/path'
     logRequest: boolean
     logResponse: boolean
 ```
@@ -41,7 +41,7 @@ Get values for parameter hierarchy recursively:
     awsCredentials: 'awsCredentials'
     regionName: 'us-west-2'
     readMode: 'hierarchy'
-    parameterPath: 'parameter/heirarchy/path'
+    parameterPath: 'parameter/hierarchy/path'
     recursive: true
     logRequest: true
     logResponse: true
