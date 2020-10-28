@@ -6,6 +6,47 @@
 
 <a name="systemsmanager-getparameter-synopisis"></a>Reads one or more values from Systems Manager Parameter Store into build variables\.
 
+## Syntax<a name="aws-properties-aws-cli-syntax"></a>
+
+To declare this entity in your Azure Pipelines template, use the following syntax:
+
+### YAML<a name="aws-ssm-get-parameter-syntax.yaml"></a> 
+Get value for single parameter:
+```
+- task: SystemsManagerGetParameter@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    readMode: 'single'
+    parameterName: 'parameterName'
+    parameterVersion: 'parameterVersion'
+    logRequest: boolean
+    logResponse: boolean
+```
+Get values for parameter hierarchy:
+```
+- task: SystemsManagerGetParameter@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    readMode: 'hierarchy'
+    parameterPath: 'parameter/heirarchy/path'
+    logRequest: boolean
+    logResponse: boolean
+```
+Get values for parameter hierarchy recursively:
+```
+- task: SystemsManagerGetParameter@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    readMode: 'hierarchy'
+    parameterPath: 'parameter/heirarchy/path'
+    recursive: true
+    logRequest: true
+    logResponse: true
+```
+
 ## Description<a name="description"></a>
 
 This task reads a parameter value, or hierarchy of values identified by common path, into build variables in the build or release definition\. These variables are then accessible from downstream tasks in the definition\. The names used for the build variables are customizable\.
