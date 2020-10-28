@@ -6,7 +6,7 @@
 
 <a name="systemsmanager-getparameter-synopisis"></a>Reads one or more values from Systems Manager Parameter Store into build variables\.
 
-## Syntax<a name="aws-properties-aws-cli-syntax"></a>
+## Syntax<a name="aws-properties-aws-ssm-syntax"></a>
 
 To declare this entity in your Azure Pipelines template, use the following syntax:
 
