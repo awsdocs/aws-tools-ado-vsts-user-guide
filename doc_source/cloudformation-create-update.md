@@ -215,13 +215,15 @@ There are three options to choose from “Stack Outputs”.
 
 1.	Skip processing stack outputs –
 This will skip the stack output, and no output will be captured into variable/s. You will see the message “Skipping processing of stack outputs to build variables as task option is set to 'ignore' mode” in the log.
+
 2.	Save stack outputs into task variables
-This will process the stack output to the defined variable in “Stack ID Output Variable”. The variable name should be the same as defined in the stack. You can mention multiple variables by commo separating.
-This will enable one more option “Use secured variables”. The Output variable/s marked as secure variable, can’t be viewed.
-The variable can be use as `$(variableName)`
+This will Creating stack variable to hold corresponding stack output value. The variable can be use as `$(variableName)`
+
+It enables one more option “Use secured variables”. The Output variable/s marked as secure variable, can’t be viewed. 
+
 3.	Save stack outputs as a JSON blob
-This will process the stack output to a JSON file. The “Stack ID Output Variable” can be kept blank. The JSON filename is suffixed by “Outputs” with the stack name.  The JSON file contains special characters, and it will give an error while parsing. For PowerShell scripting, the JSON can be pars as below. The JSON filename needs to mention in a single inverted commo.
-$Json= '$({StackName}Outputs)' | ConvertFrom-Json  
+The JSON filename is suffixed by “Outputs” with the stack name.  The JSON file contains special characters, and it will give an error while parsing. For PowerShell scripting, the JSON can be pars as below. The JSON filename needs to mention in a single inverted commo.
+`$Json= '$({StackName}Outputs)' | ConvertFrom-Json`
 
 
 #### Max Timeout<a name="max-timeout"></a>
