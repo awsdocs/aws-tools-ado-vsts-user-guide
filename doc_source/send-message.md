@@ -64,3 +64,30 @@ This task requires permissions to call the following AWS service APIs \(dependin
 + sns:Publish
 + sqs:GetQueueAttributes
 + sqs:SendMessage
+
+## Syntax<a name="aws-properties-aws-send-messsage-syntax"></a>
+
+To declare this entity in your Azure Pipelines template, use the following syntax:
+
+### YAML<a name="aws-send-message-syntax.yaml"></a> 
+Send a message to an Amazon Simple Notification Service (SNS) topic:
+```
+- task: SendMessage@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    message: 'Hello from Azure Pipelines'
+    topicArn: 'topic_arn'
+```
+
+Send a message to an Amazon Simple Queue Service (SQS) queue.
+```
+- task: SendMessage@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    messageTarget: 'queue'
+    message: 'Hello from Azure Pipelines'
+    queueUrl: 'queue_url'
+    delaySeconds: '0'
+```
