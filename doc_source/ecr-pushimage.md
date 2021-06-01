@@ -23,17 +23,18 @@ The default name of the task instance, which can be modified: Push Image
 Specifies the AWS credentials to be used by the task in the build agent environment\.
 
 You can specify credentials using a service endpoint \(of type AWS\) in the task configuration or you can leave unspecified\. If unspecified the task will attempt to obtain credentials from the following sources in order:
-+ From task variables named *AWS\.AccessKeyID*, *AWS\.SecretAccessKey* and optionally *AWS\.SessionToken*\.
-+ From credentials set in environment variables in the build agent process\. When using environment variables in the build agent process you may use the standard AWS environment variables: *AWS\_ACCESS\_KEY\_ID*, *AWS\_SECRET\_ACCESS\_KEY* and optionally *AWS\_SESSION\_TOKEN*\.
-+ If the build agent is running on an Amazon EC2 instance, from the instance metadata associated with the EC2 instance\. For credentials to be available from EC2 instance metadata the instance must have been started with an instance profile referencing a role granting permissions to the task to make calls to AWS on your behalf\. For more information, see [Using an IAM role to grant permissions to applications running on Amazon EC2 instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html)\.
+
+- From task variables named _AWS\.AccessKeyID_, _AWS\.SecretAccessKey_ and optionally _AWS\.SessionToken_\.
+- From credentials set in environment variables in the build agent process\. When using environment variables in the build agent process you may use the standard AWS environment variables: _AWS_ACCESS_KEY_ID_, _AWS_SECRET_ACCESS_KEY_ and optionally _AWS_SESSION_TOKEN_\.
+- If the build agent is running on an Amazon EC2 instance, from the instance metadata associated with the EC2 instance\. For credentials to be available from EC2 instance metadata the instance must have been started with an instance profile referencing a role granting permissions to the task to make calls to AWS on your behalf\. For more information, see [Using an IAM role to grant permissions to applications running on Amazon EC2 instances](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html)\.
 
 ### AWS Region<a name="aws-region"></a>
 
-The AWS Region code \(for example, us\-east\-1, us\-west\-2\) of the Region containing the AWS resources the task will use or create\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the *Amazon Web Services General Reference*\.
+The AWS Region code \(for example, us\-east\-1, us\-west\-2\) of the Region containing the AWS resources the task will use or create\. For more information, see [Regions and endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html) in the _Amazon Web Services General Reference_\.
 
-If a Region is not specified in the task configuration the task will attempt to obtain the Region to be used using the standard AWS environment variable *AWS\_REGION* in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the Region using the instance metadata associated with the EC2 instance if no Region is configured on the task or set in the environment variable\.
+If a Region is not specified in the task configuration the task will attempt to obtain the Region to be used using the standard AWS environment variable _AWS_REGION_ in the build agent process's environment\. Tasks running in build agents hosted on Amazon EC2 instances \(Windows or Linux\) will also attempt to obtain the Region using the instance metadata associated with the EC2 instance if no Region is configured on the task or set in the environment variable\.
 
- **Note:** The Regions listed in the picker are those known at the time this software was released\. New Regions that are not listed may still be used by entering the *region code* of the Region \(for example, *us\_west\_2*\)\.
+**Note:** The Regions listed in the picker are those known at the time this software was released\. New Regions that are not listed may still be used by entering the _region code_ of the Region \(for example, _us_west_2_\)\.
 
 ### Image Identity\*<a name="image-identity"></a>
 
@@ -41,7 +42,7 @@ How the image to be pushed is identified\. You can select from either the image 
 
 ### Source Image Name<a name="source-image-name"></a>
 
-The name of the image to push\. Required if *Image Identity* is set to *Image name with optional tag*\.
+The name of the image to push\. Required if _Image Identity_ is set to _Image name with optional tag_\.
 
 ### Source Image Tag<a name="source-image-tag"></a>
 
@@ -49,7 +50,7 @@ Optional tag that can be suffixed to the image name\. If a tag is not specified,
 
 ### Source Image ID<a name="source-image-id"></a>
 
-The ID of the image to push\. Required if *Image Identity* is set to *Image ID*\.
+The ID of the image to push\. Required if _Image Identity_ is set to _Image ID_\.
 
 ### Target Repository Name\*<a name="target-repository-name"></a>
 
@@ -65,7 +66,7 @@ If checked, the task will check to see if the repository exists and if it does n
 
 ### Image Tag Output Variable<a name="image-tag-output-variable"></a>
 
-The name of a build variable that will be created or updated with the pushed image reference\. The image tag will be of the form *aws\_account\_id\.dkr\.ecr\.region\.amazonaws\.com/imagename*, where **imagename** is in the format *repositoryname\[:tag\]* 
+The name of a build variable that will be created or updated with the pushed image reference\. The image tag will be of the form _aws_account_id\.dkr\.ecr\.region\.amazonaws\.com/imagename_, where **imagename** is in the format _repositoryname\[:tag\]_
 
 ## Task Permissions<a name="task-permissions"></a>
 
@@ -98,4 +99,22 @@ This task requires permissions to call the following AWS service APIs \(dependin
     }
   ]
 }
+```
+
+## Syntax<a name="aws-properties-amazon-ecr-push-syntax"></a>
+
+To declare this entity in your Azure Pipelines template, use the following syntax:
+
+### YAML<a name="amazon-ecr-push-syntax.yaml"></a>
+
+Push an image to ECR:
+
+```
+- task: ECRPushImage@1
+  inputs:
+    awsCredentials: 'awsCredentials'
+    regionName: 'us-west-2'
+    imageSource: 'imagename'
+    sourceImageName: 'imageName'
+    repositoryName: 'repositoryName'
 ```
