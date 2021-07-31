@@ -50,7 +50,9 @@ You can create a link to your AWS subscription by using the **Service connection
 
 1. Choose the settings icon in the lower\-left side of the screen, and then choose **Service connections**\.
 
-1. From **New AWS service connection**, choose **AWS**\. This opens the **Add AWS service connection** form\.
+1. Click the **Create service connection** button or the **New service connection** button (the title of the button varies depending on whether you already have some other service connection created or not).
+
+1. In the **New service connection** form, choose **AWS**\. This opens the **Add AWS service connection** form\.
 
 1. Provide a **Connection name**, **Access key ID**, and **Secret key ID**, and complete any other fields you want\.
 
