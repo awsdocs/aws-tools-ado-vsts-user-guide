@@ -82,11 +82,19 @@ Optional variable name to which the version label for the revision will be store
 ## Task Permissions<a name="task-permissions"></a>
 
 This task requires permissions to call the following AWS service APIs \(depending on selected task options, not all APIs may be used\):
++ autoscaling:DescribeScalingActivities
++ autoscaling:DescribeAutoScalingGroups
++ autoscaling:ResumeProcesses
++ autoscaling:SuspendProcesses
++ cloudformation:DescribeStackResource
++ cloudformation:DescribeStackResources
++ cloudformation:GetTemplate
 + elasticbeanstalk:CreateApplicationVersion
 + elasticbeanstalk:CreateStorageLocation
 + elasticbeanstalk:DescribeApplications
 + elasticbeanstalk:DescribeEnvironments
 + elasticbeanstalk:DescribeEvents
 + elasticbeanstalk:UpdateEnvironment
++ elasticloadbalancing:RegisterInstancesWithLoadBalancer
 
 The task also requires permissions to upload your application content to the specified Amazon S3 bucket\. Depending on the size of the application bundle, either PutObject or the S3 multi\-part upload APIs may be used\.
